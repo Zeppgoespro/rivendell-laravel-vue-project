@@ -5,11 +5,11 @@ import AppLayout from '../components/AppLayout.vue'
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
 import Products from "../views/Products/Products.vue";
-// import Users from "../views/Users/Users.vue";
+import Users from "../views/Users/Users.vue";
 // import Customers from "../views/Customers/Customers.vue";
 // import CustomerView from "../views/Customers/CustomerView.vue";
-// import Orders from "../views/Orders/Orders.vue";
-// import OrderView from "../views/Orders/OrderView.vue";
+import Orders from "../views/Orders/Orders.vue";
+import OrderView from "../views/Orders/OrderView.vue";
 import RequestPassword from "../views/RequestPassword.vue";
 import ResetPassword from "../views/ResetPassword.vue";
 import NotFound from "../views/NotFound.vue";
@@ -46,16 +46,16 @@ const routes = [
         name: 'app.users',
         component: Users,
       },
-      {
-        path: 'customers',
-        name: 'app.customers',
-        component: Customers,
-      },
-      {
-        path: 'customers/:id',
-        name: 'app.customers.view',
-        component: CustomerView,
-      },
+      // {
+      //   path: 'customers',
+      //   name: 'app.customers',
+      //   component: Customers,
+      // },
+      // {
+      //   path: 'customers/:id',
+      //   name: 'app.customers.view',
+      //   component: CustomerView,
+      // },
       {
         path: 'orders',
         name: 'app.orders',
@@ -66,26 +66,26 @@ const routes = [
         name: 'app.orders.view',
         component: OrderView,
       },
-      {
-        path: '/report',
-        name: 'reports',
-        component: Report,
-        meta: {
-          requiresAuth: true,
-        },
-        children: [
-          {
-            path: 'orders/:date?',
-            name: 'reports.orders',
-            component: OrdersReport,
-          },
-          {
-            path: 'customers/:date?',
-            name: 'reports.customers',
-            component: CustomersReport,
-          },
-        ],
-      },
+      // {
+      //   path: '/report',
+      //   name: 'reports',
+      //   component: Report,
+      //   meta: {
+      //     requiresAuth: true,
+      //   },
+      //   children: [
+      //     {
+      //       path: 'orders/:date?',
+      //       name: 'reports.orders',
+      //       component: OrdersReport,
+      //     },
+      //     {
+      //       path: 'customers/:date?',
+      //       name: 'reports.customers',
+      //       component: CustomersReport,
+      //     },
+      //   ],
+      // },
     ],
   },
   {
