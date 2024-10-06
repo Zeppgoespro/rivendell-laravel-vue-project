@@ -1,14 +1,32 @@
 /** @type {import('tailwindcss').Config} */
+
+// Borozepped
+
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx,vue}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-in-down': {
+          "from": {
+            transform: "translateY(-0.75rem)",
+            opacity: '0'
+          },
+          "to": {
+            transform: "translateY(0rem)",
+            opacity: '1'
+          },
+        },
+      },
+      animation: {
+        'fade-in-down': "fade-in-down 0.2s ease-in-out both",
+      },
+    },
+    plugins: [
+      require('@tailwindcss/forms'),
+    ],
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
 }
-
